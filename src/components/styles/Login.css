@@ -120,6 +120,11 @@ html {
     position: absolute;
     background-color: #797979;
 }
+.sign-in-with-google{
+    border: none;
+    background-color: none;
+    background-color: white;
+}
 form{
     margin: 20px 0;
 }
