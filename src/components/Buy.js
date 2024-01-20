@@ -1,4 +1,3 @@
-import './vanilla-tilt';
 import './styles/Buy.css';
 import React from "react";
 import Navbar from './Navbar';

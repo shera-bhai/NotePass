@@ -16,7 +16,7 @@ root.render(
   <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element = {<Test/>}></Route>
+        <Route path='/' element = {<App/>}></Route>
         <Route path='/login' element = {<Login/>}></Route>
         <Route path='/sell' element = {<Sell/>}></Route>
         <Route path='/buy' element = {<Buy/>}></Route>

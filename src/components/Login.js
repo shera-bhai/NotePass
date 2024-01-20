@@ -2,22 +2,11 @@ import { React, useState } from "react";
 import './styles/Login.css';
 import Navbar from './Navbar';
 import Google from './google.svg';
-import { auth, googleProvider } from './firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login(){
 
     const Navigate = useNavigate();
-
-    const GoogleLoginButton = () => {
-      const handleGoogleLogin = async () => {
-        try {
-          const result = await auth.signInWithPopup(googleProvider);
-          console.log(result.user);
-        } catch (error) {
-          console.error(error.message);
-        }
-      };
 
     return(
         <>
@@ -36,7 +25,7 @@ function Login(){
               <div className="one_tap_login">
                 <div className="google">
                   <img src={ Google } alt="" style={{mixBlendMode: 'multiply'}} />
-                  <button onClick={GoogleLoginButton}>Continue with Google</button>
+                  <button>Continue with Google</button>
                 </div>
               </div>
               <div className="or">
@@ -108,7 +97,6 @@ function Login(){
     </div>
     </>
     );
-  }
 }
 
 export default Login;
