@@ -3,6 +3,7 @@ import './styles/Login.css';
 import Navbar from './Navbar';
 import Google from './google.svg';
 import { Link, useNavigate } from 'react-router-dom';
+import GoogleSignInButton from "./GoogleSignInButton";
 
 function Login(){
 
@@ -25,7 +26,7 @@ function Login(){
               <div className="one_tap_login">
                 <div className="google">
                   <img src={ Google } alt="" style={{mixBlendMode: 'multiply'}} />
-                  <button className="sign-in-with-google">Continue with Google</button>
+                 <GoogleSignInButton/>
                 </div>
               </div>
               <div className="or">
