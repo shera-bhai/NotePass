@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles/Navbar.css";
-import logo from "./logo.svg";
+import logo from "./logoi.png";
 import { Link } from "react-router-dom";
 
 function Navbar(){
     return(
         <div className="header">
           <nav>
-            <a href="./index.html"><img src={ logo } className="logo" /></a>
+          <Link to='/'><img src={ logo } className="logo" style={{width: "15vw"}} /></Link>
             <ul id="nav-item">
               <Link to='/'><li><a>Home</a></li></Link>
               <Link to='/buy'><li><a>Buy Books</a></li></Link>

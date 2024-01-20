@@ -26,7 +26,11 @@ function Login(){
               <div className="one_tap_login">
                 <div className="google">
                   <img src={ Google } alt="" style={{mixBlendMode: 'multiply'}} />
+<<<<<<< HEAD
                  <GoogleSignInButton/>
+=======
+                  <a>Continue with Google</a>
+>>>>>>> 24c5810627e5f72034a5cfffbe8bd071208b0bd1
                 </div>
               </div>
               <div className="or">
