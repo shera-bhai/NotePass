@@ -72,12 +72,16 @@ body::-webkit-scrollbar {
 }
 
 .navitems:hover{
+  
     color: #e91e63;
+  
+    color: blue;
 }
 
 #def-shad{
     cursor: default;
     color: #e91e63;
+    color: blue;
     pointer-events: none;
 }
 
@@ -92,6 +96,8 @@ body::-webkit-scrollbar {
     text-decoration: none;
     background-color: #e91e63;
     border: 2px solid #e91e63;
+    background-color: blue;
+    border: 2px solid blue;
     /* backdrop-filter: blur(10px); */
     padding: 7px 12px 7px 12px;
     animation: slideDown 1.75s ease-in-out;
@@ -103,6 +109,8 @@ body::-webkit-scrollbar {
     border: 2px solid #e91e63;
     background-color: #e91e63;
     box-shadow: 0px 0px 10px 5px #e91e63;
+    border: 2px solid blue;
+    background-color: blue;
 }
 
 .mainframe{
@@ -117,11 +125,15 @@ body::-webkit-scrollbar {
     animation: fadeIn 1s ease-in-out;
     /* animation: slideIn 1.75s ease-in-out; */
     box-shadow: 0 0 20px 5px #e91e63;
+    box-shadow: 0 0 20px 5px #0e0d0d81;
 }
 
 .info_frame{
     width: 30vw;
     background-color: #e91e63;
+    display:flex;
+    flex-direction:column;
+    background-color: blue;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -137,7 +149,7 @@ ul{
 
 .info_tagline{
     color: #fff;
-    margin: 5px 0 0 40px;
+    text-align:center;
 }
 
 #faphone, #famail{
@@ -174,6 +186,11 @@ ul{
 
 #fain:focus, #fain:hover, #fatel:focus, #fatel:hover{
     color: #e91e63;
+    color: blue;
+}
+
+#fain:focus, #fain:hover, #fatel:focus, #fatel:hover{
+    color: blue;
 }
 
 .list-group{
@@ -199,6 +216,12 @@ ul{
 li div{
     display: flex;
     margin: 50px 0 0 0;
+}
+.ul-div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:70px;
 }
 
 .form_name, .form_mail, .form_mobile{
@@ -227,19 +250,24 @@ li div{
 
 .form_name:focus, .form_mail:focus, .form_mobile:focus, #form_subject:focus, .form_name:hover, .form_mail:hover, .form_mobile:hover, #form_subject:hover{
     border-bottom-color:#e91e63;
+    border-bottom-color:blue;
 }
+
 
 .btn{
     width: 7vw;
     border: none;
-    color: #000;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     border-radius: 7px;
     margin: 40px 0 0 95px;
     background-color: #e91e63;
+    background-color: blue;
     padding: 10px 15px 10px 15px;
+    transition:box-shadow 0.3s;
 }
+
 
 #submit{
     margin: 0 0 0 10%;
@@ -249,6 +277,7 @@ li div{
     /* background-color: #2acaff; */
     color: #fff;
     box-shadow: 0 0 10px 0 #e91e63;
+    box-shadow: 0 0 10px 0 blue;
 }
 
 .btn:focus{
