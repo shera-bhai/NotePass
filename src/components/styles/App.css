@@ -120,7 +120,7 @@ html {
   }
 
   50% {
-    transform: translateY(55px)
+    transform: translateY(10px)
   }
 }
 
@@ -168,8 +168,9 @@ html {
 .Aboutus {
   width: 95%;
   color: #000;
-  margin-top: -10.5%;
+  margin-top: -11%;
   margin-left: 2.5%;
+  margin-bottom: 2%;
   background: #fff;
   border-radius: 15px;
   animation: float 2.75s linear infinite;
@@ -230,7 +231,7 @@ nav #bars-ico {
 }
 
 .footer {
-  margin-top: -1.2%;
+  margin-top: 20%;
   background-color: black;
   position: none;
 }

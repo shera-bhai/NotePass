@@ -110,6 +110,7 @@ body::-webkit-scrollbar {
     height: 70vh;
     margin-top: 4.5%;
     margin-left: 17vw;
+    margin-bottom: 7%;
     border-radius: 20px;
     display: inline-flex;
     background-color: white;
@@ -255,7 +256,6 @@ li div{
 }
 
 .footer{
-    margin-top: 4%;
     background-color: black;
   }
   .row{

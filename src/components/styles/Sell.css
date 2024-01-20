@@ -19,40 +19,37 @@
   bottom: 0;
   z-index: -2;
 }
-
 body{
-   background-size: cover;
-   background-position: center;
-   
-
+  background-size: cover;
+  background-position: center;
 }
 .container {
     width: 100%;
-    height: 150vh;
+    height: 200%;
     background-size: cover;
     background-position: center;
     background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
-   
   }
 
 .main_heading{
-    /* margin-top: 3%; */
+  /* height: 0vh; */
 }
 
 div h1{
-    padding-top: 2%;
-    font-size: 35px;
-    color: #fff;
-    text-align: center;
+  padding-top: 2%;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
 }
 
 .book_details{
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 40px;
-    color: #fff;
+  width: 20vw;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 5%;
+  /* margin-right: 5%; */
+  padding-bottom: 20px;
+  color: #fff;
 }
 
 .form-div{
@@ -60,18 +57,17 @@ div h1{
     align-items:center;
     justify-content: center;
     margin-left:150px;
+    margin-bottom: 6%;
     background-color:rgba(0, 0, 0, 0.559);
     width:80%;
     border-radius:30px;
 }
 
-
-
 .book_name{
     margin-left: 1%;
     font-size: 15px;
     height: 40px;
-    width: 30%;
+    width: 80%;
     padding-left: 10px;
     border-radius: 10px;
 }
@@ -80,7 +76,7 @@ div h1{
     margin-left: 1%;
     font-size: 15px;
     height: 40px;
-    width: 30%;
+    width: 80%;
     padding-left: 10px;
     border-radius: 10px;
 }
@@ -89,25 +85,7 @@ div h1{
     margin-left: 1%;
     font-size: 15px;
     height: 40px;
-    width: 30%;
-    padding-left: 10px;
-    border-radius: 10px;
-}
-
-.book_sellprice{
-    margin-left: 1%;
-    font-size: 15px;
-    height: 40px;
-    width: 30%;
-    padding-left: 10px;
-    border-radius: 10px;
-}
-
-.book_cond{
-    margin-left: 1%;
-    font-size: 15px;
-    height: 40px;
-    width: 30%;
+    width: 80%;
     padding-left: 10px;
     border-radius: 10px;
 }
@@ -116,16 +94,15 @@ div h1{
     margin-left: 1%;
     font-size: 15px;
     height: 40px;
-    width: 30%;
+    width: 800%;
     padding-left: 10px;
     border-radius: 10px;
 }
 
 .book_btn{
+  margin-left: 7%;
     height: 60px;
     text-align: center;
-    margin-left: -0.25%;
-    /* padding-top: 5px; */
     padding: 10px 20px 10px 18px;
     border: 2px solid white;
     border-radius: 10px;

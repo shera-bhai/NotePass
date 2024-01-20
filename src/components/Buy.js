@@ -6,7 +6,7 @@ function Buy(){
     return(
         <>
         <Navbar/>
-        <div className="container">
+      <div className="container">
         <section className="header">
           <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="back-video" />
         </section>
