@@ -28,7 +28,7 @@
 /*To set the background position*/
 .container {
   width: 100%;
-  height: 140vh;
+  min-height: 145vh;
   background-size: cover;
   background-position: center;
   background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));

@@ -72,11 +72,15 @@ body::-webkit-scrollbar {
 }
 
 .navitems:hover{
+  
+    color: #e91e63;
+  
     color: blue;
 }
 
 #def-shad{
     cursor: default;
+    color: #e91e63;
     color: blue;
     pointer-events: none;
 }
@@ -90,6 +94,8 @@ body::-webkit-scrollbar {
     border-radius: 50px;
     font-weight: bolder;
     text-decoration: none;
+    background-color: #e91e63;
+    border: 2px solid #e91e63;
     background-color: blue;
     border: 2px solid blue;
     /* backdrop-filter: blur(10px); */
@@ -100,6 +106,9 @@ body::-webkit-scrollbar {
 #donate-btn:hover {
     color: #000;
     transition: 0.1s;
+    border: 2px solid #e91e63;
+    background-color: #e91e63;
+    box-shadow: 0px 0px 10px 5px #e91e63;
     border: 2px solid blue;
     background-color: blue;
 }
@@ -115,11 +124,13 @@ body::-webkit-scrollbar {
     background-color: white;
     animation: fadeIn 1s ease-in-out;
     /* animation: slideIn 1.75s ease-in-out; */
+    box-shadow: 0 0 20px 5px #e91e63;
     box-shadow: 0 0 20px 5px #0e0d0d81;
 }
 
 .info_frame{
     width: 30vw;
+    background-color: #e91e63;
     display:flex;
     flex-direction:column;
     background-color: blue;
@@ -170,6 +181,11 @@ ul{
 }
 
 #fadis:focus, #fadis:hover{
+    color: #e91e63;
+}
+
+#fain:focus, #fain:hover, #fatel:focus, #fatel:hover{
+    color: #e91e63;
     color: blue;
 }
 
@@ -233,6 +249,7 @@ li div{
 }
 
 .form_name:focus, .form_mail:focus, .form_mobile:focus, #form_subject:focus, .form_name:hover, .form_mail:hover, .form_mobile:hover, #form_subject:hover{
+    border-bottom-color:#e91e63;
     border-bottom-color:blue;
 }
 
@@ -245,6 +262,7 @@ li div{
     font-weight: bold;
     border-radius: 7px;
     margin: 40px 0 0 95px;
+    background-color: #e91e63;
     background-color: blue;
     padding: 10px 15px 10px 15px;
     transition:box-shadow 0.3s;
@@ -258,6 +276,7 @@ li div{
 .btn:hover{
     /* background-color: #2acaff; */
     color: #fff;
+    box-shadow: 0 0 10px 0 #e91e63;
     box-shadow: 0 0 10px 0 blue;
 }
 
