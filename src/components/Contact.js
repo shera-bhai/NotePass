@@ -1,12 +1,29 @@
 import Navbar from './Navbar';
-import React from 'react';
+import React, {useEffect, useState } from 'react';
 import './styles/Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getAuth,onAuthStateChanged } from 'firebase/auth';
+import Navaft from './Navaft';
 
 function Contact () {
+  const [User,setUser] = useState(null);
+  useEffect(() => {
+    
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        setUser(user.displayName);
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      unsubscribe();
+    };
+  }, []);
     return (
         <>
-        <Navbar/>
+        {User ?<Navaft/> : <Navbar/>}
         <div>
         <div className="background">
           <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="back-video" />
