@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/Navbar.css";
+import "./styles/Navaft.css";
 import logo from "./logoi.png";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function Navaft(){
     return(
         <div className="header">
           <nav>
-            <a href="./index.html"><img src={ logo } className="logo" /></a>
+            <a href="./index.html"><img src={ logo } className="logo1" /></a>
             <ul id="nav-item">
               <Link to='/'><li><a>Home</a></li></Link>
               <Link to='/buy'><li><a>Buy Books</a></li></Link>
