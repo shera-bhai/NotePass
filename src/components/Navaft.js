@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/Navbar.css";
-import logo from "./logo.svg";
+import logo from "./logoi.png";
 import { Link } from "react-router-dom";
 
 function Navaft(){
@@ -19,3 +19,5 @@ function Navaft(){
         </div>
     )
 }
+
+export default Navaft;

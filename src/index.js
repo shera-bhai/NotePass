@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { firebaseConfig } from './components/firebase'; // Import your Firebase configuration
 import { initializeApp } from 'firebase/app';
-
+import Account from './components/Account';
 
 const firebaseApp = initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
