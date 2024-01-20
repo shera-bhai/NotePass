@@ -64,11 +64,11 @@ html {
 } */
 
 .text-box {
-  width: 90%;
+  width: 92%;
   color: #fff;
   position: absolute;
-  top: 55%;
-  left: 50%;
+  top: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -168,7 +168,7 @@ html {
 .Aboutus {
   width: 95%;
   color: #000;
-  margin-top: -11%;
+  margin-top: -25%;
   margin-left: 2.5%;
   margin-bottom: 2%;
   background: #fff;
