@@ -72,12 +72,12 @@ body::-webkit-scrollbar {
 }
 
 .navitems:hover{
-    color: #FF4500;
+    color: #2c4aba;
 }
 
 #def-shad{
     cursor: default;
-    color: #FF4500;
+    color: #2c4aba;
     pointer-events: none;
 }
 
@@ -90,8 +90,8 @@ body::-webkit-scrollbar {
     border-radius: 50px;
     font-weight: bolder;
     text-decoration: none;
-    background-color: #FF4500;
-    border: 2px solid #FF4500;
+    background-color: #2c4aba;
+    border: 2px solid #2c4aba;
     /* backdrop-filter: blur(10px); */
     padding: 7px 12px 7px 12px;
     animation: slideDown 1.75s ease-in-out;
@@ -100,9 +100,9 @@ body::-webkit-scrollbar {
 #donate-btn:hover {
     color: #000;
     transition: 0.1s;
-    border: 2px solid #FF4500;
-    background-color: #FF4500;
-    box-shadow: 0px 0px 10px 5px #FF4500;
+    border: 2px solid #2c4aba;
+    background-color: #2c4aba;
+    box-shadow: 0px 0px 10px 5px #2c4aba;
 }
 
 .mainframe{
@@ -116,12 +116,12 @@ body::-webkit-scrollbar {
     background-color: white;
     animation: fadeIn 1s ease-in-out;
     /* animation: slideIn 1.75s ease-in-out; */
-    box-shadow: 0 0 20px 5px #FF4500;
+    box-shadow: 0 0 20px 5px #2c4aba;
 }
 
 .info_frame{
     width: 30vw;
-    background-color: #FF4500;
+    background-color: #2c4aba;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -169,11 +169,11 @@ ul{
 }
 
 #fadis:focus, #fadis:hover{
-    color: #FF4500;
+    color: #2c4aba;
 }
 
 #fain:focus, #fain:hover, #fatel:focus, #fatel:hover{
-    color: #FF4500;
+    color: #2c4aba;
 }
 
 .list-group{
@@ -226,7 +226,7 @@ li div{
 }
 
 .form_name:focus, .form_mail:focus, .form_mobile:focus, #form_subject:focus, .form_name:hover, .form_mail:hover, .form_mobile:hover, #form_subject:hover{
-    border-bottom-color:#FF4500;
+    border-bottom-color:#2c4aba;
 }
 
 .btn{
@@ -237,7 +237,7 @@ li div{
     font-weight: bold;
     border-radius: 7px;
     margin: 40px 0 0 95px;
-    background-color: #FF4500;
+    background-color: #2c4aba;
     padding: 10px 15px 10px 15px;
 }
 
@@ -248,7 +248,7 @@ li div{
 .btn:hover{
     /* background-color: #2acaff; */
     color: #fff;
-    box-shadow: 0 0 10px 0 #FF4500;
+    box-shadow: 0 0 10px 0 #2c4aba;
 }
 
 .btn:focus{

@@ -15,14 +15,14 @@ function Sell(){
           <h1>UPLOAD MATERIAL</h1><br /><hr /><br /><br />
           <div className="form-div">
             <div>
-              <form action="https://formsubmit.co/fce0a1ac3e14be0a3e3a0887066535f4" method="POST"><p /><ol>
+              <form action="http://localhost:5000/api/upload" method="POST" encType="multipart/form-data"><p /><ol>
                   <br /><br />
-                  <li className="book_details">Name of Material<input type="text" name="Book Name" className="book_name" required /></li>
-                  <li className="book_details">Description of Material<input type="text" name="Book Author" className="book_author" required /></li>
-                  <li className="book_details">Subject Related to<input type="text" name="Actual Price" className="book_actprice" required /></li>
-                  <li className="book_details">Upload Material</li><figure className="image-container"><img id="chosen-image" /><figcaption className="file-name" /></figure><input type="file" name="Book Image" id="upload-button" accept="file/*" required /><div id="display-image" /><label htmlFor="upload-button" className="book_btn"><i className="fas fa-upload" />Choose a File</label>
+                  <li className="book_details">Name of Material<input type="text" name="Name" className="book_name" required /></li>
+                  <li className="book_details">Description of Material<input type="text" name="Desc" className="book_author" required /></li>
+                  <li className="book_details">Subject Related to<input type="text" name="Related" className="book_actprice" required /></li>
+                  <li className="book_details">Upload Material</li><input type="file" name="image" id="upload-button" accept="file/*" required /><div id="display-image" /><label htmlFor="upload-button" className="book_btn"><i className="fas fa-upload" />Choose a File</label>
                 </ol><p />
-                <button type="submit" className="submit-btn"  style={{ marginTop: "30%" }}>SUBMIT</button><br /><br /><br />
+                <button onClick={()=>{alert('Submitted Successfully')}}className="submit-btn"  style={{ marginTop: "30%" }}>SUBMIT</button><br /><br /><br />
               </form>
             </div>
           </div>

@@ -90,13 +90,13 @@ div h1{
     border-radius: 10px;
 }
 
-.book_desc{
-    margin-left: 1%;
-    font-size: 15px;
-    height: 40px;
-    width: 800%;
-    padding-left: 10px;
-    border-radius: 10px;
+.book_url{
+  margin-left: 1%;
+  font-size: 15px;
+  height: 40px;
+  width: 80%;
+  padding-left: 10px;
+  border-radius: 10px;
 }
 
 .book_btn{
