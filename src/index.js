@@ -13,7 +13,7 @@ import Account from './components/Account';
 import Forgot from './components/Forgot';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
+    <>
     <BrowserRouter>
       <Routes>
         <Route path='/' element = {<App/>}></Route>
