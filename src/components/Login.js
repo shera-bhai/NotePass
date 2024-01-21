@@ -1,12 +1,61 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import './styles/Login.css';
 import Navbar from './Navbar';
 import Google from './google.svg';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
-
+import GoogleSignInButton from "./GoogleSignInButton";
+import Validation from "./LoginValidation";
+import { auth } from "./firebase";
 function Login(){
 
-    const Navigate = useNavigate();
+  const [values, setValues] = useState({
+
+    email: '',
+    password: ''
+
+  });
+  const handleInput = (event) => {
+    setValues(prev => ({ ...prev, [event.target.name]: event.target.value }))
+  }
+  const navigate = useNavigate();
+  const [SubmitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const [errors, setErrors] = useState({});
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // Set the disabled state before checking for errors
+    setSubmitButtonDisabled(true);
+
+    setErrors(Validation(values));
+  }
+  useEffect(() => {
+    // Display alerts for each error
+    
+    if (errors.email) alert(`${errors.email}`);
+    if (errors.password) alert(`${errors.password}`);
+  }, [errors]);
+
+  useEffect(() => {
+    // This effect will be triggered after the errors state has been updated
+
+    // Check if there are no errors and submit the form
+    if (errors.email === '' && errors.password === '') {
+      signInWithEmailAndPassword(auth, values.email, values.password)
+        .then((res) => {
+          setSubmitButtonDisabled(false);
+          console.log(res);
+          navigate('/');
+        })
+        .catch((err) => {
+          setSubmitButtonDisabled(false);
+          console.log(err);
+        });
+    } else {
+      // If there are errors, enable the button
+      setSubmitButtonDisabled(false);
+    }
+  }, [errors, values.name, values.email, values.password, navigate]);
 
     return(
         <>
@@ -25,7 +74,8 @@ function Login(){
               <div className="one_tap_login">
                 <div className="google">
                   <img src={ Google } alt="" style={{mixBlendMode: 'multiply'}} />
-                  <a>Continue with Google</a>
+                 <GoogleSignInButton/>
+                  
                 </div>
               </div>
               <div className="or">
@@ -33,9 +83,9 @@ function Login(){
                 <p>or</p>
                 <div className="empty" />
               </div>
-              <form action="#">
-                <input type="text" placeholder="Email" required />
-                <input type="password" placeholder="Password" required />
+              <form onSubmit={handleSubmit}>
+                <input type="text" placeholder="Email" onChange={handleInput} name="email" required />
+                <input type="password" placeholder="Password" onChange={handleInput} name="password" required />
                 <div className="submit">
                   <button id="loginbtn" type="submit">Login</button>
                 </div>
@@ -45,8 +95,8 @@ function Login(){
                         <label for="term"> Remember for 30 days</label>
                     </div> */}
               <div className="account">
-                <p>Don't Have an Account? <a onClick={() => Navigate('/signup')} style={{ color: "darkblue", cursor: "pointer" }}> Sign Up</a></p>
-                <Link to={'./'}><a style={{color: "darkblue"}}>Forgot Password?</a></Link>
+                <p>Don't Have an Account? <a onClick={() => navigate('/signup')} style={{ color: "darkblue", cursor: "pointer" }}> Sign Up</a></p>
+                <Link to={'/forgot'}><a style={{color: "darkblue"}}>Forgot Password?</a></Link>
               </div>
             </div>
           </div>

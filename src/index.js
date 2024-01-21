@@ -3,14 +3,17 @@ import App from './App';
 import React from 'react';
 import Buy from './components/Buy';
 import Sell from './components/Sell';
-import Test from './components/sign';
 import Login from './components/Login';
 import Contact from './components/Contact';
 import Signup from './components/Signup';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { firebaseConfig } from './components/firebase'; 
+import { initializeApp } from 'firebase/app';
+import Account from './components/Account';
+import Forgot from './components/Forgot';
+const firebaseApp = initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -22,6 +25,8 @@ root.render(
         <Route path='/buy' element = {<Buy/>}></Route>
         <Route path='/contact' element = {<Contact/>}></Route>
         <Route path='/signup' element = {<Signup/>}></Route>
+        <Route path='/account' element = {<Account/>}></Route>
+        <Route path = '/forgot' element = {<Forgot/>}></Route>
       </Routes>
     </BrowserRouter>
     </>

@@ -1,18 +1,25 @@
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCYo_mcn3KYyVqx1RtZfWGz3SmF7su1uW4",
-//     authDomain: "passmybook-a8b8d.firebaseapp.com",
-//     projectId: "passmybook-a8b8d",
-//     storageBucket: "passmybook-a8b8d.appspot.com",
-//     messagingSenderId: "955823565433",
-//     appId: "1:955823565433:web:c379aab216c9d3107ac2a8",
-//     measurementId: "G-V4L5JE4C70"
-// };
+import {getFirestore} from 'firebase/firestore'
+import {getAuth} from 'firebase/auth';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// const app = firebase.initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDmhAM4WVY9I_KkCXmWRHKOHiR1z4zAJHM",
+  authDomain: "passbook-5f622.firebaseapp.com",
+  projectId: "passbook-5f622",
+  storageBucket: "passbook-5f622.appspot.com",
+  messagingSenderId: "988007522185",
+  appId: "1:988007522185:web:74ed82f13b55de4d4dcb58",
+  measurementId: "G-YBMEW90GRT"
+};
 
-// export const auth = app.auth();
-// export const googleProvider = new firebase.auth.GoogleAuthProvider();
-// export default app;
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore(app);
+export {app , auth, db, firebaseConfig};

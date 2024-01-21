@@ -2,29 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/Buy.css';
+import React from "react";
 import Navbar from './Navbar';
 
-function Buy() {
-  const [books, setBooks] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/books');
-        setBooks(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setError('Error fetching data. Please try again.');
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return (
-    <>
-      <Navbar />
+function Buy(){
+    return(
+        <>
+        <Navbar/>
       <div className="container">
         <section className="header">
           <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="back-video" />

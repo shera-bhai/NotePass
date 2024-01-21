@@ -1,12 +1,29 @@
 import Navbar from './Navbar';
-import React from 'react';
+import React, {useEffect, useState } from 'react';
 import './styles/Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getAuth,onAuthStateChanged } from 'firebase/auth';
+import Navaft from './Navaft';
 
 function Contact () {
+  const [User,setUser] = useState(null);
+  useEffect(() => {
+    
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        setUser(user.displayName);
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      unsubscribe();
+    };
+  }, []);
     return (
         <>
-        <Navbar/>
+        {User ?<Navaft/> : <Navbar/>}
         <div>
         <div className="background">
           <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="back-video" />
@@ -22,14 +39,19 @@ function Contact () {
               <li className="info_li_contact"></li>
             </ul>
           </div>
+          
           <form className="list-group" action="https://formsubmit.co/d289ee363aabcb7ee34c1b7c32e24a93" method="POST">
+            <div class="ul-div">
+            <div>
             <ul>
-              <li><FontAwesomeIcon icon="fa-solid fa-phone" /><input type="text" name="Name" placeholder="Enter Your Name" className="form_name" required /></li>
-              <li><FontAwesomeIcon icon="fa-solid fa-envelope" /><input type="email" name="Mail" placeholder="Enter Your Mail" className="form_mail" required /></li>
-              <li><FontAwesomeIcon icon="fa-solid fa-location-dot" /><input type="number" name="Mobile" placeholder="Enter Your Mobile No" className="form_mobile" required /></li>
+              <li><FontAwesomeIcon icon="fa-solid fa-phone" /><input type="text" name="Name" placeholder="Enter Your Name" className="form_name" required /></li><br></br>
+              <li><FontAwesomeIcon icon="fa-solid fa-envelope" /><input type="email" name="Mail" placeholder="Enter Your Mail" className="form_mail" required /></li><br></br>
+              <li><FontAwesomeIcon icon="fa-solid fa-location-dot" /><input type="number" name="Mobile" placeholder="Enter Your Mobile No" className="form_mobile" required /></li><br></br>
               <li><textarea name="Subject" id="form_subject" cols={30} rows={3} placeholder="Write Your Message (200 Words)" maxLength={200} required defaultValue={""} /></li>
               <li><button className="btn" type="submit">Send<i id="submit" className="fa-solid fa-paper-plane fa-lg"><a href /></i></button></li>
             </ul>
+            </div>
+            </div>
           </form>
         </div>
       </div>

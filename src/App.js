@@ -1,11 +1,30 @@
 import './components/styles/App.css'
-import React from 'react';
+import React, { useState , useEffect} from 'react';
 import Navbar from './components/Navbar';
-
+import Navaft from './components/Navaft';
+import { getAuth,onAuthStateChanged } from 'firebase/auth';
 function App() {
+    const [User,setUser] = useState(null);
+    useEffect(() => {
+        const auth = getAuth();
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+          if (user) {
+            setUser(user.displayName);
+          }
+        });
+    
+        // Cleanup function
+        return () => {
+          unsubscribe();
+        };
+      }, []);
+
+
+
     return (
     <>
-    <Navbar/>
+    {User ?<Navaft/> : <Navbar/>}
+    
     <div className="container">
         <sec className="header">
             <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="back-video" />
